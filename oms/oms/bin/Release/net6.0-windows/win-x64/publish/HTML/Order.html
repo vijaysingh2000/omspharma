@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>AllCare Speciality</title>
+</head>
+<body>
+    <style>
+        table {
+            border-width: thin;
+            border-spacing: 0px;
+            border-style : groove;
+            border-color: lightgray;
+        }
+        tr, td {
+            border-top: hidden;
+            border-left: hidden;
+            border-bottom: groove;
+            border-right:groove;
+            border-width:1px;
+        }
+    </style>
+    <font face="Tahoma">
+        <table width="100%" style="font-size:10px" cellspacing="0">
+            <tr bgcolor="cyan">
+                <td align="center" colspan="8"><b>UC Communications/ Factor Order Request</b></td>
+            </tr>
+            <tr>
+                <td><b>MRN</b></td>
+                <td colspan="2">{mrn}</td>
+                <td><b>Patient Name</b></td>
+                <td colspan="2">{patientname}</td>
+                <td><b>Date</b></td>
+                <td>{date}</td>
+            </tr>
+            <tr>
+                <td><b>Delivery Address</b></td>
+                <td colspan="5">{deliveryaddress}</td>
+                <td><b><span style="color:red">Confirmed DOS</span></b></td>
+                <td><b><span style="color:red">{confirmeddos}</span></b></td>
+            </tr>
+            <tr>
+                <td><b>Drug Name</b></td>
+                <td colspan="2"><b>{drugname}</b></td>
+                <td><b>Insurance</b></td>
+                <td colspan="2"><b>{insurancename}</b></td>
+                <td><span style="color:green"><b>Confirmed Delivery Date</b></span></td>
+                <td colspan="2"><span style="color:green"><b>{confirmeddeliverydate}</b></span></td>
+            </tr>
+            <tr>
+                <td><b>Direction</b></td>
+                <td colspan="2">{directions}</td>
+                <td><b>Next Call</b></td>
+                <td colspan="2">{nextcalldate}</td>
+                <td><b>CCS Case#</b></td>
+                <td>{ccscase#}</td>
+            </tr>
+            <tr>
+                <td><b>Estimated Delivery Date</b></td>
+                <td colspan="2">{estimateddeliverydate}</td>
+                <td><b>Supplies only or Medication Only</b></td>
+                <td colspan="2">{suppliesmedication}</td>
+                <td><b>IV Access</b></td>
+                <td>{ivaccess}</td>
+            </tr>
+            <tr>
+                <td><b>#PROPHY doses on hand</b></td>
+                <td colspan="2">{noofprophyinhand}</td>
+                <td><b>Prophy</b></td>
+                <td colspan="2">{prophy}</td>
+                <td><b>Last MD Visit</b></td>
+                <td>{lastmdvisit}</td>
+            </tr>
+            <tr>
+                <td><b>Will Infuse last dose</b></td>
+                <td colspan="2">{willinfuselastdose}</td>
+                <td><b>PRN</b></td>
+                <td colspan="2">{prn}</td>
+                <td><b>Weight</b></td>
+                <td>{weight}</td>
+            </tr>
+            <tr>
+                <td><b>#of PRN doses on hand</b></td>
+                <td colspan="2">{noofprndosesinhand}</td>
+                <td colspan="5"><b>&nbsp;</b></td>
+            </tr>
+            <tr>
+                <td align="center" colspan="3"><b>FACTOR follow up w/ Pharmacy</b></td>
+                <td><b>Insurance issues or changes</b></td>
+                <td colspan="2">{insuranceissues}</td>
+                <td><b>Travel Plans</b></td>
+                <td>{travelplans}</td>
+            </tr>
+            <tr>
+                <td><b>#Insurance Eligible</b></td>
+                <td colspan="2">{insuranceeligible}</td>
+                <td><b>Notified Nurse of bleed</b></td>
+                <td colspan="2">{notifiednurseofbleeds}</td>
+                <td><b>Procedures</b></td>
+                <td>{procedures}</td>
+            </tr>
+            <tr>
+                <td><b>PRIOR Authorization Approval Dates</b></td>
+                <td colspan="2">{priorauthapproval}</td>
+                <td><b>Updates to report to HTC</b></td>
+                <td colspan="4">{updatetoreporttohtc}</td>
+            </tr>
+            <tr>
+                <td><b>Advance Factor Needed</b></td>
+                <td colspan="2">{advancefactorneeded}</td>
+                <td><b>PT Education-Rotating Home Stock &amp; Date</b></td>
+                <td colspan="4">{pteducation}</td>
+            </tr>
+            <tr>
+                <td colspan="8"><b>{notes}</b></td>
+            </tr>
+            <tr>
+                <td colspan="8"></td>
+            </tr>
+            <tr>
+                <td colspan="8" bgcolor="cyan" align="center"><b>SUPPLIES and/or Oral Meds REQUESTED</b></td>
+            </tr>
+            <tr>
+                <td><b>Description</b></td>
+                <td><b>Item#</b></td>
+                <td><b>Qty</b></td>
+                <td><b>Lot/Exp</b></td>
+                <td><b>Description</b></td>
+                <td><b>Item#</b></td>
+                <td><b>Qty</b></td>
+                <td><b>Lot/Exp</b></td>
+            </tr>
+            {supplies}
+            <tr>
+                <td colspan="8"><b><i><span style="color:blue">For Pharmacy Use</span></i></b></td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">Patient RX Acipt Info</td>
+                <td>{patientrxscriptinfo}</td>
+                <td>Dose Count</td>
+                <td>{dosecount}</td>
+                <td>Written Date</td>
+                <td colspan="2">{writtendate}</td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">FILL Count</td>
+                <td>{fillcount1}</td>
+                <td>OF</td>
+                <td>{fillcount2}</td>
+                <td>Date of Service</td>
+                <td colspan="2">{dateofservice}</td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">BILLING FILL Count</td>
+                <td>{billingfillcount1}</td>
+                <td>OF</td>
+                <td>{billingfillcount2}</td>
+                <td>% of variance</td>
+                <td colspan="2">{percentageofvariance}</td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">Total Prescribed Units</td>
+                <td>{totalprescribedunit}</td>
+                <td>Total Units ORDERED</td>
+                <td>{totalunitsordered}</td>
+                <td>Confirmation#</td>
+                <td colspan="2">{confirmation#}</td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">Date ordered</td>
+                <td>{dateordered}</td>
+                <td>PO#</td>
+                <td>{po#}</td>
+                <td>Manufacturer</td>
+                <td colspan="2">{manufacturer}</td>
+            </tr>
+            <tr align="center">
+                <td colspan="2"><b>Prodct</b></td>
+                <td><b>{product1}</b></td>
+                <td><b>{product2}</b></td>
+                <td><b>{product3}</b></td>
+                <td>&nbsp;</td>
+                <td colspan="2">&nbsp;</td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">Assay</td>
+                <td>{assay1}</td>
+                <td>{assay2}</td>
+                <td>{assay3}</td>
+                <td>Acceptable Outdate</td>
+                <td colspan="2">{acceptableoutdate}</td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">NDC</td>
+                <td>{ndc1}</td>
+                <td>{ndc2}</td>
+                <td>{ndc3}</td>
+                <td><b>Total Units Prescribed</b></td>
+                <td colspan="2">{totalunitsprescribed}</td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">Quantity</td>
+                <td>{qty1}</td>
+                <td>{qty2}</td>
+                <td>{qty3}</td>
+                <td><b>Total Units to Bill</b></td>
+                <td colspan="2">{totalunitstobill}</td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">Total Units</td>
+                <td>{totalunit1}</td>
+                <td>{totalunit2}</td>
+                <td>{totalunit3}</td>
+                <td><b>COG/UNIT</b></td>
+                <td colspan="2">{cogperunit}</td>
+            </tr>
+            <tr align="center">
+                <td colspan="2"><b>Total COG Each</b></td>
+                <td>{totalcog1}</td>
+                <td>{totalcog2}</td>
+                <td>{totalcog3}</td>
+                <td><b>Total COG Order</b></td>
+                <td colspan="2">{totalcogorder}</td>
+            </tr>
+            <tr align="center">
+                <td colspan="2"><b>Bill Charge Each</b></td>
+                <td>{totalbillcharge1}</td>
+                <td>{totalbillcharge2}</td>
+                <td>{totalbillcharge3}</td>
+                <td><b>Billed/UNIT</b></td>
+                <td colspan="2">{billedperunit}</td>
+            </tr>
+            <tr align="center">
+                <td colspan="2"><b>Expiration date</b></td>
+                <td>{expdate1}</td>
+                <td>{expdate2}</td>
+                <td>{expdate3}</td>
+                <td><b>Total Bill Charge</b></td>
+                <td colspan="2">{totalbillcharge}</td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">Lot Number</td>
+                <td>{lot1}</td>
+                <td>{lot2}</td>
+                <td>{lot3}</td>
+                <td>Provider Name</td>
+                <td colspan="2">{providername}</td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">RX Number</td>
+                <td>{rx1}</td>
+                <td>{rx2}</td>
+                <td>{rx3}</td>
+                <td>340B ID</td>
+                <td colspan="2">{340bid}</td>
+            </tr>
+        </table>
+    </font>
+</body>
+</html>

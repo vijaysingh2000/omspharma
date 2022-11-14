@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<staticlist>
+	<list name="ID340B">
+		<model id="1" name="HM11968 (Admin-Stockton)" description="HM11968 (Admin-Stockton)"/>
+		<model id="2" name="HM95816 (Midtown)" description="HM95816 (Midtown)"/>
+		<model id="3" name="HM95817 (Peds)" description="HM95817 (Peds)"/>
+		<model id="4" name="HM958171 (Cancer Adult-X)" description="HM958171 (Cancer Adult-X)"/>
+	</list>
+	<list name="ACCEPTABLEOUTDATES">
+		<model id="1" name="Prophy>3months" description="Prophy>3months"/>
+		<model id="2" name="PRN>6months" description="PRN>6months"/>
+		<model id="3" name="Infrequent Demand=>1 Year" description="Infrequent Demand=>1 Year"/>
+	</list>
+	<list name="PAYMENTTYPE">
+		<model id="1" name="Interest" description="Interest"/>
+		<model id="2" name="Overpaid" description="Overpaid"/>
+		<model id="3" name="Payment" description="Payment"/>
+		<model id="4" name="Others" description="Others"/>
+	</list>	
+</staticlist>
