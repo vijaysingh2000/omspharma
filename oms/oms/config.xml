@@ -7,4 +7,5 @@
 	<importdatafile>{configfilepath}data\data.txt</importdatafile>
 	<templatefolder>{configfilepath}html</templatefolder>
 	<datafolder>c:\applicationfilesfolder</datafolder>
+	<reportfolder>{configfilepath}report</reportfolder>
 </config>
